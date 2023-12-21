@@ -3,6 +3,8 @@ package ParametrizedTests;
 import PageObject.MainPage;
 import WebDriverFactory.Asserts;
 import WebDriverFactory.UrlSettings;
+import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -90,7 +92,10 @@ public class checkQuestions {
     /*
    БЛОК КОДА связанный с самим тестом
                                                                                     */
+
     @Test
+    @Step
+    @DisplayName("Параметризированный тест по проверке вопросов")
     public void checkQuestions() {
         driver.get(UrlSettings.URL1);
 

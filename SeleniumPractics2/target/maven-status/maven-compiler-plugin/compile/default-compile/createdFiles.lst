@@ -1,0 +1,6 @@
+WebDriverFactory\Asserts.class
+WebDriverFactory\UrlSettings.class
+WebDriverFactory\TestsData.class
+org\example\Main.class
+PageObject\MainPage.class
+WebDriverFactory\WaitSettings.class

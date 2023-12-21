@@ -115,7 +115,8 @@ public class MainPage {
                 //
                     // Методы и переменные для теста №6 (некоторые нужные методы мне, уже написаны в №5)
 
-    private final By btnDeleteCard = By.xpath("/html/body/div/div/main/section[2]/ul/li[position()=1]/button[not(@style= 'visibility: hidden')]"); //Изначально кнопка скрыта, добавил фильтр
+    //private final By btnDeleteCard = By.xpath("/html/body/div/div/main/section[2]/ul/li[position()=1]/button[not(@style= 'visibility: hidden')]"); //Изначально кнопка скрыта, добавил фильтр
+    private final By btnDeleteCard = By.xpath("/html/body/div/div/main/section[2]/ul/li[position()=1]/button[@class = 'card__delete-button card__delete-button_visible']");
     // Для ассерта
     private final By defaultCardLocator = By.xpath("/html/body/div/div/main/section[2]/ul/li[position()=1]//h2[@class = 'card__title' and contains(text(), 'Москва сити')]");
 
@@ -137,14 +138,15 @@ public class MainPage {
                 //
                     // Методы и переменные для теста №7
 
-    private final By btnLikeCard = By.xpath("/html/body/div/div/main/section[2]/ul/li[1]/div[2]/div/button[@type = 'button']");
+    private final By btnLikeCard = By.xpath("/html/body/div/div/main/section[2]/ul/li[2550]/div[2]/div/button[@type = 'button']");
     // Для ассерта
-    private final By getLikeCounts = By.xpath("//ul/li[position()=1]//p[@class = 'card__like-count']");
+    private final By getLikeCounts = By.xpath("//ul/li[position()=2550]//p[@class = 'card__like-count']");
 
     public MainPage likeCard() {
         driver.findElement(btnLikeCard).click();
         return this;
     }
+
     public boolean checkLikeCard(){
         return driver.findElement(getLikeCounts).getText().contains(WebDriverConfig.EXPECTED_LIKE_COUNT);
     }

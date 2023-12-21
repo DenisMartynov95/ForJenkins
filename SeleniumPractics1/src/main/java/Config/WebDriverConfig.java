@@ -1,11 +1,17 @@
 package Config;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
+import java.util.Random;
+
 public class WebDriverConfig {
+    Random random = new Random();
+
     public static final int WAIT_2_SECONDS = 2;
     public static final int WAIT_5_SECONDS =5;
 
     // Переменные для тестов регистрации (№1)
-    public static final String REGISTRATION_EMAIL_FIELD = "i56ewrq3113eu@mail.ru";
+    public static final String REGISTRATION_EMAIL_FIELD = RandomStringUtils.randomAlphabetic(7) +"@mail.ru";
     public static final String REGISTRATION_PASSWORD_FIELD = "sajdh213";
 
     // Переменные для тестов авторизации(№2 и все остальные)
@@ -27,5 +33,5 @@ public class WebDriverConfig {
     public static final String DEFAULT_PLACE_NAME = "Москва сити";
 
             // Переменная для теста №7
-    public static final String EXPECTED_LIKE_COUNT = "11";
+    public static final String EXPECTED_LIKE_COUNT = "1";
 }

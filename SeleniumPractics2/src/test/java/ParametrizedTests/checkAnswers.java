@@ -2,6 +2,8 @@ package ParametrizedTests;
 
 import WebDriverFactory.Asserts;
 import WebDriverFactory.UrlSettings;
+import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -105,6 +107,8 @@ public class checkAnswers {
     }
 
     @Test
+    @Step
+    @DisplayName("Параметризированный тест по проверке ответов")
     public void checkAnswers() {
         driver.get(UrlSettings.URL1);
 
